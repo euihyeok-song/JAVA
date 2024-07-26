@@ -15,6 +15,14 @@ public class Member implements Serializable {
     public Member() {
     }
 
+    /* 설명. 회원이 회원가입 하기 위해서 선택한 필드에 대한 매개변수 생성자 - id,pwd,age,hobbies + setter(bloodType)*/
+    public Member(String id, String pwd, int age, String[] hobbies) {
+        this.id = id;
+        this.pwd = pwd;
+        this.age = age;
+        this.hobbies = hobbies;
+    }
+
     public Member(int memNo, String id, String pwd, int age, String[] hobbies, BloodType bloodType) {
         this.memNo = memNo;
         this.id = id;
