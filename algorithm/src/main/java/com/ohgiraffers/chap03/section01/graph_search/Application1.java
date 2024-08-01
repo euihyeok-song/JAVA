@@ -44,18 +44,18 @@ public class Application1 {
 //            StringTokenizer str = new StringTokenizer(br.readLine()," ");     // (1 2)를 배열의 원소로 넣어야함
             StringTokenizer str = new StringTokenizer(br.readLine());           // 안적어도 자동으로 띄어쓰기 기준으로 잘라줌
 
-            int a = Integer.valueOf(str.nextToken());           // row
-            int b= Integer.valueOf(str.nextToken());            // col
+            int a = Integer.valueOf(str.nextToken());            // row(가로)
+            int b = Integer.valueOf(str.nextToken());            // col(세로)
 
             /* 설명. 대각행렬의 개념으로 경로를 나타내는 map을 작성
             *       무방향(양방향) 그래프로 처리되기 위해 노드 번호들(인덱스 번호)을 반대로도 적용한디. */
             map[a][b] = map[b][a] = 1;
         }
 
-        /* 설명. map을 출력해 살표보기 */
+        /* 설명. map을 출력해 살펴보기 */
         for (int j = 0; j < node + 1; j++) {
             for (int k = 0; k < node + 1; k++) {
-                System.out.println(map[j][k] + " ");
+                System.out.print(map[j][k] + " ");
             }
             System.out.println();
         }
